@@ -656,7 +656,7 @@ class FoxQtumProvider extends BaseProvider {
   wallet_watchAsset(payload) {
     let options = payload.params.options;
     this.postMessage("watchAsset", payload.id, {
-      type: payload.type,
+      type: payload.params.type,
       contract: options.address,
       symbol: options.symbol,
       decimals: options.decimals || 0,
